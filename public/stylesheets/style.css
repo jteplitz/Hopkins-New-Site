@@ -94,3 +94,14 @@ header{
     float: left;
   }
 }
+@media(max-width: 480px){
+  header{
+    margin-top: 0;
+  }
+  .span4.featureStory.firstStory{
+    margin-left: 0 !important;
+  }
+  .featureStory .text{
+    width: 80%;
+  }
+}
