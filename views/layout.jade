@@ -2,5 +2,47 @@
 html
   head
     title= title
+    // for IE6-8 support of HTML elements
+    // if lt IE 9
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+    link(rel="stylesheet", href="/stylesheets/bootstrap.min.css")
+    link(rel="stylesheet", href="stylesheets/bootstrap.min.responsive.css")
+
+    script(type="text/javascript", src="javascripts/jquery.min.js")
+    script(type="text/javascript", src="/javascripts/bootstrap.min.js")
+
+    block styles
+
+    block scripts
+
+  body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href="/", style="float: right") Razer Online
+          .nav-collapse
+            ul.nav
+              li
+                a(href="#") Entertainment
+              li
+                a(href="#") Op-Ed
+              li
+                a(href="#") Sports
+              li
+                a(href="#") The beat
+
+    .container
+      header
+        block header
+      block content
+
+    block footer
+      footer
+        p Hopkins News Site brought to you by the Hopkins computer science club
