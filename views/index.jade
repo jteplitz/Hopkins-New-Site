@@ -1,10 +1,113 @@
 extends layout
 
+block scripts
+  script(src="javascripts/pixastic.core.js", type="text/javascript");
+  script(src="javascripts/blurfast.js", type="text/javascript");
+  script(src="javascripts/lighten.js", type="text/javascript");
+  script(src="javascripts/pixastic.jquery.js", type="text/javascript");
+  script
+    $(document).ready(function(){
+      var images = $(".imageBox img");
+      for(var i = 0; i < images.length; i++){
+       Pixastic.process(images[i], "lighten", {amount: -0.4});
+       // Pixastic.process(images[i], "desaturate");
+      }
+    });
+
+
 block header
   .inner
-    .hero-unit
-      img(src="http://placehold.it/500x200")
-  
-
+    .row
+      .span4.featureStory.firstStory
+        .text
+          h2 Title of this really awesome amazing cool story
+          p.author By Author
+        .imageBox
+          img(src="images/feature1.jpg", id="firstImage")
+      .span4.featureStory
+        .text
+          h2 Title of this really awesome amazing cool story
+          p.author By Author
+        .imageBox
+          img(src="images/feature2.jpg")
+      .span4.featureStory
+        .text
+          h2 Title of this really awesome amazing cool story
+          p.author By Author
+        .imageBox
+          img(src="images/feature3.jpg")
+    .row
+      .span4.featureStory.firstStory
+        .text
+          h2 Title of this really awesome amazing cool story
+          p.author By Author
+        .imageBox
+          img(src="images/feature4.jpg", id="firstImage")
+      .span4.featureStory
+        .text
+          h2 Title of this really awesome amazing cool story
+          p.author By Author
+        .imageBox
+          img(src="images/feature5.jpg")
+      .span4.featureStory
+        .text
+          h2 Title of this really awesome amazing cool story
+          p.author By Author
+        .imageBox
+          img(src="images/feature6.jpg")
 
 block content
+  .row-fluid
+    .span4
+      img.rowImage(src="http://placehold.it/35x22")
+      h2 News Story
+      p.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, faucibus at suscipit imperdiet, egestas placerat nulla. Nullam mi sem, pretium sit amet malesuada sed, bibendum in augue. Aliquam ultricies tellus vitae enim consectetur sed pretium velit blandit. In ut egestas lectus. Cras non nulla nisl. Curabitur feugiat nisi eget risus pellentesque aliquet. Curabitur ac imperdiet augue. Proin vitae accumsan lacus. Donec blandit pharetra lectus, at dictum lacus pharetra eu.
+    .span4
+      img.rowImage(src="http://placehold.it/35x22")
+      h2 News Story
+      p.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, faucibus at suscipit imperdiet, egestas placerat nulla. Nullam mi sem, pretium sit amet malesuada sed, bibendum in augue. Aliquam ultricies tellus vitae enim consectetur sed pretium velit blandit. In ut egestas lectus. Cras non nulla nisl. Curabitur feugiat nisi eget risus pellentesque aliquet. Curabitur ac imperdiet augue. Proin vitae accumsan lacus. Donec blandit pharetra lectus, at dictum lacus pharetra eu.
+    .span4
+      img.rowImage(src="http://placehold.it/35x22")
+      h2 News Story
+      p.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, faucibus at suscipit imperdiet, egestas placerat nulla. Nullam mi sem, pretium sit amet malesuada sed, bibendum in augue. Aliquam ultricies tellus vitae enim consectetur sed pretium velit blandit. In ut egestas lectus. Cras non nulla nisl. Curabitur feugiat nisi eget risus pellentesque aliquet. Curabitur ac imperdiet augue. Proin vitae accumsan lacus. Donec blandit pharetra lectus, at dictum lacus pharetra eu.
+  .row-fluid
+    .span4
+      img.rowImage(src="http://placehold.it/35x22")
+      h2 News Story
+      p.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, faucibus at suscipit imperdiet, egestas placerat nulla. Nullam mi sem, pretium sit amet malesuada sed, bibendum in augue. Aliquam ultricies tellus vitae enim consectetur sed pretium velit blandit. In ut egestas lectus. Cras non nulla nisl. Curabitur feugiat nisi eget risus pellentesque aliquet. Curabitur ac imperdiet augue. Proin vitae accumsan lacus. Donec blandit pharetra lectus, at dictum lacus pharetra eu.
+    .span4
+      img.rowImage(src="http://placehold.it/35x22")
+      h2 News Story
+      p.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, faucibus at suscipit imperdiet, egestas placerat nulla. Nullam mi sem, pretium sit amet malesuada sed, bibendum in augue. Aliquam ultricies tellus vitae enim consectetur sed pretium velit blandit. In ut egestas lectus. Cras non nulla nisl. Curabitur feugiat nisi eget risus pellentesque aliquet. Curabitur ac imperdiet augue. Proin vitae accumsan lacus. Donec blandit pharetra lectus, at dictum lacus pharetra eu.
+    .span4
+      img.rowImage(src="http://placehold.it/35x22")
+      h2 News Story
+      p.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, faucibus at suscipit imperdiet, egestas placerat nulla. Nullam mi sem, pretium sit amet malesuada sed, bibendum in augue. Aliquam ultricies tellus vitae enim consectetur sed pretium velit blandit. In ut egestas lectus. Cras non nulla nisl. Curabitur feugiat nisi eget risus pellentesque aliquet. Curabitur ac imperdiet augue. Proin vitae accumsan lacus. Donec blandit pharetra lectus, at dictum lacus pharetra eu.
+
+  .row-fluid
+    .span3
+      img.rowImage(src="http://placehold.it/35x22")
+      h2 Smaller News Story
+      p.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, faucibus at suscipit imperdiet, egestas placerat nulla. Nullam mi sem, pretium sit amet malesuada sed, bibendum in augue.
+    .span3
+      img.rowImage(src="http://placehold.it/35x22")
+      h2 Smaller News Story
+      p.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, faucibus at suscipit imperdiet, egestas placerat nulla. Nullam mi sem, pretium sit amet malesuada sed, bibendum in augue.
+    .span3
+      img.rowImage(src="http://placehold.it/35x22")
+      h2 Smaller News Story
+      p.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, faucibus at suscipit imperdiet, egestas placerat nulla. Nullam mi sem, pretium sit amet malesuada sed, bibendum in augue.
+    .span3
+      img.rowImage(src="http://placehold.it/35x22")
+      h2 Smaller News Story
+      p.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, faucibus at suscipit imperdiet, egestas placerat nulla. Nullam mi sem, pretium sit amet malesuada sed, bibendum in augue.
